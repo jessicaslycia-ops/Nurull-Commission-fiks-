@@ -1,1 +1,72 @@
 
+/* Efek Latar Belakang God Rays (Pojok Kiri Atas) */
+.god-ray {
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 60vw;
+    height: 60vw;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, rgba(236, 72, 153, 0.05) 50%, rgba(0,0,0,0) 70%);
+    filter: blur(60px);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Efek Glassmorphism (Kartu Transparan Kabur Mirip Gambar Kedua) */
+.glass-card {
+    background: rgba(18, 14, 33, 0.45);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+/* Efek Glow Border Halus pada Tombol Menu & Sub-Card */
+.nav-btn {
+    position: relative;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px border;
+    border-color: rgba(255, 255, 255, 0.08);
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: rgba(209, 213, 219, 0.8);
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(4px);
+    overflow: hidden;
+}
+
+/* Efek Hover Glow */
+.nav-btn:hover {
+    color: #fff;
+    border-color: rgba(168, 85, 247, 0.5);
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.25);
+    background: rgba(168, 85, 247, 0.05);
+}
+
+/* Gaya Tombol yang Sedang Aktif/Terpilih */
+.active-tab {
+    background: bg-gradient-to-r from-purple-900/40 to-pink-900/40;
+    color: #f3e8ff !important;
+    border-color: rgba(168, 85, 247, 0.6) !important;
+    box-shadow: 0 0 25px rgba(168, 85, 247, 0.35), inset 0 0 10px rgba(168, 85, 247, 0.2);
+}
+
+/* Sub-card hover effect */
+.sub-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.sub-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -5px rgba(168, 85, 247, 0.2);
+}
+
+/* Animasi Fade-in Lembut saat Halaman di-load */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+}
